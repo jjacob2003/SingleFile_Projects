@@ -1,3 +1,6 @@
+#A tic-tac-toe game built using Python and turtle graphics that takes input of the user 
+#depending on the user's clicks, and displays a tic-tac-toe game where the user plays the 
+#computer. 
 import random as r
 import turtle as t
 
