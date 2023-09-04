@@ -1,3 +1,7 @@
+#Includes the puzzle sets needed for the sudoku solver in the EmptySudoku.py file
+#4 puzzles which indicate the index and the number at each index, resembling a normal sudoku board
+
+
 ############################### ALl Puzzle Sets ###############################
 
 
