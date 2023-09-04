@@ -1,3 +1,6 @@
+#A simple Sudoku Solver built using Python and Z3, that can take input of various puzzles 
+#and solve them using predicate logic
+
 for i in range(1, 5):
     for j in range(1, 5):
         for n in range(1, 5):
