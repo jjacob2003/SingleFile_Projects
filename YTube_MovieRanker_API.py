@@ -1,3 +1,8 @@
+#A Python project that uses YouTube and Wikipedia data to predict future movie revenues. 
+#It collects YouTube video statistics and Wikipedia details for upcoming movies, then employs 
+#fictional models to estimate gross revenue and tickets sold. This tool offers insights into movie 
+#potential based on online engagement and Wikipedia content.
+
 import os
 import pandas as pd
 from googleapiclient.discovery import build
@@ -5,7 +10,6 @@ import wikipediaapi
 import re  # Import the regular expressions module
 from datetime import datetime
 
-# Replace with your actual YouTube API key
 api_key = "AIzaSyDZQp060eTNQq-BPUl38wcZWbMwFo1oGHw"
 youtube = build('youtube', 'v3', developerKey=api_key)
 
@@ -83,7 +87,6 @@ def extract_wikipedia_features(movie_title):
     release_date = release_date_match.group(1).strip() if release_date_match else "Date not found"
 
     # Implement your feature extraction logic from Wikipedia data here
-    # For simplicity, let's assume a placeholder feature "Wikipedia Feature"
     wikipedia_feature = len(wikipedia_data)
     return {"Wikipedia Feature": wikipedia_feature, "Release Date": release_date}
 
@@ -121,7 +124,6 @@ predict_gross_and_tickets(df)
 # Sort the DataFrame by predicted gross revenue in descending order
 sorted_df = df.sort_values(by='predicted_gross', ascending=False)
 
-# Print information for the top 5 movies
 print("Prediction for the top 5 upcoming movies and their predicted revenue/tickets sold\n")
 print("Top 5 Movies:")
 top_5_movies = sorted_df.head(5)
